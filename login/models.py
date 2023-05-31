@@ -8,6 +8,7 @@ class user(models.Model):
     User_name = models.TextField()
     User_password = models.TextField()
     Is_admin = models.IntegerField()
+    Is_login = models.IntegerField(default=0)
     def __str__(self):
         return f"User ID: {self.User_id}, User Nicename: {self.User_name}"
     

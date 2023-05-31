@@ -55,6 +55,9 @@ def login(request):
         if Password_md5 != User.User_password:
             error_message = 'Password is incorrect!'
             return render(request, 'login/login.html', {'error_message': error_message})
+        
+        User.Is_login = 1 # 0 means the user doesn't login, 1 means the user has logged in to their account
+        User.save()
 
         # Create a response object and set a cookie
         response = goto_index_view(request,'/')
@@ -67,6 +70,8 @@ def login(request):
         Username = request.COOKIES.get('Username')
         try:
             User = user.objects.get(User_name=Username)
+            User.User_status = 0
+            User.save()
         except user.DoesNotExist:
             pass
         
