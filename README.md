@@ -5,4 +5,6 @@ Here is a test website repo.
 
 ### 1. Built the Django Structure.
 
-### 2. Added login and sign-up features
+### 2. Added login and sign-up features.
+
+### 3. Finished Lockdown feature.
