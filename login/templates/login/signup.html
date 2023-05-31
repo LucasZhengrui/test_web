@@ -1,0 +1,32 @@
+<head>
+    <title>
+        Sign up page
+    </title>
+</head>
+<body>
+    <form method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <div>
+            <label for="name">Username</label>
+            <input type="text" name="name" required>
+        </div>
+        <div>
+            <label for="Password">Password</label>
+            <input type="password" id="Password" name="Password" required>
+        </div>
+        <div>
+            <label for="Confirm_Password">Please type your Password again</label>
+            <input type="password" id="Confirm_Password" name="Confirm_Password" required>
+        </div>
+        <span>{{Error_message}}</span>
+        <button type="submit">Submit</button>&nbsp;&nbsp;
+        <div>
+            <p>
+                If you have an account, Please
+                <a href="/">
+                    Login
+                </a>
+            </p>
+        </div>
+    </form>
+</body>

@@ -1,0 +1,47 @@
+<head>
+    <title>
+        Login page
+    </title>
+</head>
+<body>
+    <div>
+        <div>
+            <div>
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <h2>
+                        Login
+                    </h2>
+                    <div>
+                        <label for="Username">
+                            Your Username:
+                        </label>
+                        <input type="text" id="Username" name="Username" required>
+                    </div>
+                    <div>
+                        <label for="Password">
+                            Your Password:
+                        </label>
+                        <input type="password" id="Password" name="Password" required>
+                    </div>
+                    <input type="submit" value="Login">
+                    <div>
+                        {% if error_message != "" %}
+                        <span>
+                            {{error_message}}
+                        </span> 
+                        {% endif %}
+                    </div>
+                </form>
+                <div>
+                    <p>
+                        If you didn't have an account, Please
+                        <a href="/signup">
+                            Sign up
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
