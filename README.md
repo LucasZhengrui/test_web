@@ -8,3 +8,5 @@ Here is a test website repo.
 ### 2. Added login and sign-up features.
 
 ### 3. Finished Lockdown feature.
+
+### 4. Deployed successfully.
